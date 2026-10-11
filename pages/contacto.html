@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Sabores de Autor - Solicita tu Cotización</title>
+  <meta name="description" content="Contáctanos para solicitar una cotización personalizada. Estamos disponibles lunes a sábado en Santiago, Chile.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#C9A961', 'gold-light': '#E8D5A0', 'gold-dark': '#A88B47',
+            cream: '#FAF7F2', 'cream-dark': '#F0E9DC',
+            'dark-brown': '#2C1810', 'dark-soft': '#4A3520'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-cream">
+
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <header class="hero-bg pt-40 pb-24 text-white" style="background-image: url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1920&q=80');">
+    <div class="hero-content container mx-auto px-6 lg:px-12 text-center">
+      <p class="text-gold-light tracking-[0.4em] uppercase text-sm mb-4 reveal">Hablemos</p>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 reveal delay-100">Contac<span class="text-gold italic">tanos</span></h1>
+      <p class="text-xl text-gray-200 max-w-2xl mx-auto reveal delay-200">
+        Solicita tu cotización personalizada y comencemos a planificar tu evento soñado
+      </p>
+    </div>
+  </header>
+
+  <div class="bg-cream-dark py-4 border-b border-gold-light/30">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="flex items-center gap-2 text-sm text-gray-600">
+        <a href="../index.html" class="hover:text-gold transition">Inicio</a>
+        <i class="fas fa-chevron-right text-xs text-gold"></i>
+        <span class="text-gold font-medium">Contacto</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFO + FORMULARIO -->
+  <section class="py-24 px-6 lg:px-12">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+
+        <!-- INFORMACIÓN -->
+        <div class="lg:col-span-2 reveal-left">
+          <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3">Información</p>
+          <h2 class="font-serif text-4xl font-bold text-dark-brown mb-6">
+            Estamos aquí <span class="italic text-gold">para ti</span>
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            Completa el formulario y un miembro de nuestro equipo se pondrá en contacto contigo dentro de las próximas 24 horas. También puedes escribirnos directamente o visitarnos en nuestra oficina.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-dark-brown text-gold flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h3 class="font-serif font-bold text-dark-brown mb-1">Dirección</h3>
+                <p class="text-gray-600 text-sm" id="info-address"></p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-dark-brown text-gold flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h3 class="font-serif font-bold text-dark-brown mb-1">Teléfono</h3>
+                <p class="text-gray-600 text-sm" id="info-phone"></p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-dark-brown text-gold flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h3 class="font-serif font-bold text-dark-brown mb-1">Email</h3>
+                <p class="text-gray-600 text-sm" id="info-email"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- HORARIOS -->
+          <div class="mt-10 bg-white rounded-xl p-6 shadow-lg border border-gold-light/30">
+            <div class="flex items-center gap-3 mb-4">
+              <i class="fas fa-clock text-gold text-xl"></i>
+              <h3 class="font-serif text-xl font-bold text-dark-brown">Horarios de Atención</h3>
+            </div>
+            <ul class="space-y-3" id="schedule-list"></ul>
+          </div>
+
+          <!-- REDES -->
+          <div class="mt-8">
+            <p class="font-serif font-bold text-dark-brown mb-4">Síguenos</p>
+            <div class="flex gap-3">
+              <a href="#" class="w-11 h-11 rounded-full bg-dark-brown text-gold hover:bg-gold hover:text-dark flex items-center justify-center transition">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="w-11 h-11 rounded-full bg-dark-brown text-gold hover:bg-gold hover:text-dark flex items-center justify-center transition">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="w-11 h-11 rounded-full bg-dark-brown text-gold hover:bg-gold hover:text-dark flex items-center justify-center transition">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="#" class="w-11 h-11 rounded-full bg-dark-brown text-gold hover:bg-gold hover:text-dark flex items-center justify-center transition">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="lg:col-span-3 reveal-right">
+          <div class="bg-white rounded-2xl shadow-2xl p-8 lg:p-12 border border-gold-light/20">
+            <h2 class="font-serif text-3xl font-bold text-dark-brown mb-2">Solicita tu Cotización</h2>
+            <p class="text-gray-600 mb-8">Cuéntanos sobre tu evento y te responderemos a la brevedad</p>
+
+            <form id="contact-form" class="space-y-5" novalidate>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label for="nombre" class="block text-sm font-medium text-dark-brown mb-2">
+                    Nombre completo <span class="text-red-500">*</span>
+                  </label>
+                  <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ej: María González">
+                  <p class="error-message">Por favor, ingresa tu nombre</p>
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-dark-brown mb-2">
+                    Email <span class="text-red-500">*</span>
+                  </label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com">
+                  <p class="error-message">Ingresa un email válido</p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label for="telefono" class="block text-sm font-medium text-dark-brown mb-2">
+                    Teléfono <span class="text-red-500">*</span>
+                  </label>
+                  <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="+56 9 1234 5678">
+                  <p class="error-message">Ingresa un teléfono válido</p>
+                </div>
+                <div>
+                  <label for="tipoEvento" class="block text-sm font-medium text-dark-brown mb-2">
+                    Tipo de evento <span class="text-red-500">*</span>
+                  </label>
+                  <select id="tipoEvento" name="tipoEvento" class="form-input">
+                    <option value="">Selecciona una opción</option>
+                    <option value="boda">Boda</option>
+                    <option value="corporativo">Evento Corporativo</option>
+                    <option value="cumpleanos">Cumpleaños / Aniversario</option>
+                    <option value="cocktail">Cocktail / Recepción</option>
+                    <option value="dulces">Mesa de Dulces</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                  <p class="error-message">Selecciona el tipo de evento</p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label for="fecha" class="block text-sm font-medium text-dark-brown mb-2">
+                    Fecha del evento <span class="text-red-500">*</span>
+                  </label>
+                  <input type="date" id="fecha" name="fecha" class="form-input">
+                  <p class="error-message">Selecciona una fecha futura</p>
+                </div>
+                <div>
+                  <label for="invitados" class="block text-sm font-medium text-dark-brown mb-2">
+                    Número de invitados <span class="text-red-500">*</span>
+                  </label>
+                  <select id="invitados" name="invitados" class="form-input">
+                    <option value="">Selecciona</option>
+                    <option value="20-50">20 - 50 personas</option>
+                    <option value="50-100">50 - 100 personas</option>
+                    <option value="100-200">100 - 200 personas</option>
+                    <option value="200+">Más de 200 personas</option>
+                  </select>
+                  <p class="error-message">Selecciona el número de invitados</p>
+                </div>
+              </div>
+
+              <div>
+                <label for="mensaje" class="block text-sm font-medium text-dark-brown mb-2">
+                  Cuéntanos sobre tu evento <span class="text-red-500">*</span>
+                </label>
+                <textarea id="mensaje" name="mensaje" rows="5" class="form-input" placeholder="Describe tu evento, ubicación, ideas especiales, dudas..."></textarea>
+                <p class="error-message">Por favor, cuéntanos sobre tu evento</p>
+              </div>
+
+              <button type="submit" class="btn-primary w-full">
+                <span><i class="fas fa-paper-plane mr-2"></i>Enviar Solicitud</span>
+              </button>
+
+              <p class="text-xs text-gray-500 text-center">
+                Al enviar este formulario, aceptas nuestra
+                <a href="privacidad.html" class="text-gold hover:underline">política de privacidad</a>.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <section class="reveal-scale">
+    <iframe
+      id="map-frame"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.3584866888094!2d-70.57558688479392!3d-33.40981298078239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c8a05b3eb1f9%3A0x4d44e4a06cf2d9f0!2sAv.%20Apoquindo%2C%20Las%20Condes%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1700000000000"
+      width="100%"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/contact.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderContactInfo();
+    });
+
+    function renderContactInfo() {
+      const data = BANQUETERIA_DATA.business;
+
+      document.getElementById('info-address').textContent = data.address;
+      document.getElementById('info-phone').textContent = data.phone + ' · ' + data.phone;
+      document.getElementById('info-email').textContent = data.email;
+
+      const scheduleList = document.getElementById('schedule-list');
+      scheduleList.innerHTML = data.schedule.map(s => `
+        <li class="flex items-center justify-between text-sm">
+          <span class="text-gray-700">${s.day}</span>
+          <span class="font-medium text-dark-brown">${s.hours}</span>
+        </li>
+      `).join('');
+    }
+  </script>
+</body>
+</html>

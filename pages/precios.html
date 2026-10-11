@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios y Planes | Sabores de Autor - Banquetería Premium</title>
+  <meta name="description" content="Conoce nuestros planes de banquetería: Esencial, Premium y Luxury. Cotización personalizada.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#C9A961', 'gold-light': '#E8D5A0', 'gold-dark': '#A88B47',
+            cream: '#FAF7F2', 'cream-dark': '#F0E9DC',
+            'dark-brown': '#2C1810', 'dark-soft': '#4A3520'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-cream">
+
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <header class="hero-bg pt-40 pb-24 text-white" style="background-image: url('https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1920&q=80');">
+    <div class="hero-content container mx-auto px-6 lg:px-12 text-center">
+      <p class="text-gold-light tracking-[0.4em] uppercase text-sm mb-4 reveal">Planes y Tarifas</p>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 reveal delay-100">Nuestros <span class="text-gold italic">Precios</span></h1>
+      <p class="text-xl text-gray-200 max-w-2xl mx-auto reveal delay-200">
+        Planes diseñados para cada tipo de evento y presupuesto
+      </p>
+    </div>
+  </header>
+
+  <div class="bg-cream-dark py-4 border-b border-gold-light/30">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="flex items-center gap-2 text-sm text-gray-600">
+        <a href="../index.html" class="hover:text-gold transition">Inicio</a>
+        <i class="fas fa-chevron-right text-xs text-gold"></i>
+        <span class="text-gold font-medium">Precios</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="pt-24 pb-12 px-6 lg:px-12">
+    <div class="container mx-auto text-center max-w-3xl">
+      <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3 reveal">Transparencia Total</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown reveal delay-100 mb-6">
+        Tres planes, <span class="italic text-gold">una experiencia</span> excepcional
+      </h2>
+      <p class="text-gray-600 text-lg reveal delay-200">
+        Cada plan incluye todo lo necesario para crear un evento memorable. Todos los precios son referenciales y la cotización final se ajusta según el tipo de evento, ubicación y servicios adicionales.
+      </p>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section class="py-12 px-6 lg:px-12">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch" id="pricing-grid"></div>
+    </div>
+  </section>
+
+  <!-- COMPARACIÓN -->
+  <section class="py-24 px-6 lg:px-12 bg-cream-dark">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3 reveal">Cuadro Comparativo</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown reveal delay-100">¿Qué incluye cada plan?</h2>
+        <div class="section-title reveal delay-200"></div>
+      </div>
+
+      <div class="overflow-x-auto reveal">
+        <table class="w-full bg-white rounded-xl shadow-lg overflow-hidden">
+          <thead class="bg-dark-brown text-white">
+            <tr>
+              <th class="py-5 px-6 text-left font-serif">Característica</th>
+              <th class="py-5 px-6 text-center font-serif text-gold-light">Esencial</th>
+              <th class="py-5 px-6 text-center font-serif text-gold-light">Premium</th>
+              <th class="py-5 px-6 text-center font-serif text-gold-light">Luxury</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr><td class="py-4 px-6 font-medium">Menú de 3 tiempos</td><td class="text-center"><i class="fas fa-check text-gold"></i></td><td class="text-center">-</td><td class="text-center">-</td></tr>
+            <tr class="bg-cream"><td class="py-4 px-6 font-medium">Menú gourmet 4 tiempos</td><td class="text-center">-</td><td class="text-center"><i class="fas fa-check text-gold"></i></td><td class="text-center">-</td></tr>
+            <tr><td class="py-4 px-6 font-medium">Degustación 6 tiempos</td><td class="text-center">-</td><td class="text-center">-</td><td class="text-center"><i class="fas fa-check text-gold"></i></td></tr>
+            <tr class="bg-cream"><td class="py-4 px-6 font-medium">Estación de cocktails</td><td class="text-center">-</td><td class="text-center"><i class="fas fa-check text-gold"></i></td><td class="text-center"><i class="fas fa-check text-gold"></i></td></tr>
+            <tr><td class="py-4 px-6 font-medium">Mesa de dulces</td><td class="text-center">-</td><td class="text-center"><i class="fas fa-check text-gold"></i></td><td class="text-center"><i class="fas fa-check text-gold"></i></td></tr>
+            <tr class="bg-cream"><td class="py-4 px-6 font-medium">Decoración floral</td><td class="text-center">Básica</td><td class="text-center">Personalizada</td><td class="text-center">A medida</td></tr>
+            <tr><td class="py-4 px-6 font-medium">Sommelier & Bartender</td><td class="text-center">-</td><td class="text-center"><i class="fas fa-check text-gold"></i></td><td class="text-center"><i class="fas fa-check text-gold"></i></td></tr>
+            <tr class="bg-cream"><td class="py-4 px-6 font-medium">Coordinador exclusivo</td><td class="text-center">Día evento</td><td class="text-center">Planificación completa</td><td class="text-center">Planificación completa</td></tr>
+            <tr><td class="py-4 px-6 font-medium">Fotografía profesional</td><td class="text-center">-</td><td class="text-center">-</td><td class="text-center"><i class="fas fa-check text-gold"></i></td></tr>
+            <tr class="bg-cream"><td class="py-4 px-6 font-medium">Producción audiovisual</td><td class="text-center">-</td><td class="text-center">-</td><td class="text-center"><i class="fas fa-check text-gold"></i></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS EXTRA -->
+  <section class="py-24 px-6 lg:px-12">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3 reveal">Complementos opcionales</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown reveal delay-100">Potencia tu Evento</h2>
+        <div class="section-title reveal delay-200"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-6 reveal delay-200">
+          Servicios adicionales que puedes agregar a cualquier plan
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="extras-grid"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-24 px-6 lg:px-12 bg-cream-dark">
+    <div class="container mx-auto max-w-3xl">
+      <div class="text-center mb-16">
+        <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3 reveal">Preguntas Frecuentes</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown reveal delay-100">Resolvemos tus Dudas</h2>
+        <div class="section-title reveal delay-200"></div>
+      </div>
+
+      <div class="space-y-4">
+        <details class="bg-white rounded-xl p-6 shadow-md reveal">
+          <summary class="font-serif text-lg font-bold text-dark-brown cursor-pointer flex items-center justify-between">
+            <span>¿Los precios incluyen todo?</span>
+            <i class="fas fa-chevron-down text-gold"></i>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            Los precios mostrados son por persona e incluyen servicio base, gastronomía y montaje según el plan elegido. Servicios adicionales como decoración floral especial, transporte o producción audiovisual se cotizan por separado.
+          </p>
+        </details>
+        <details class="bg-white rounded-xl p-6 shadow-md reveal">
+          <summary class="font-serif text-lg font-bold text-dark-brown cursor-pointer flex items-center justify-between">
+            <span>¿Con cuánta anticipación debo reservar?</span>
+            <i class="fas fa-chevron-down text-gold"></i>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            Recomendamos reservar con al menos 3 a 6 meses de anticipación para bodas y eventos grandes, y 1 mes para eventos más pequeños. Sin embargo, podemos adaptarnos según disponibilidad.
+          </p>
+        </details>
+        <details class="bg-white rounded-xl p-6 shadow-md reveal">
+          <summary class="font-serif text-lg font-bold text-dark-brown cursor-pointer flex items-center justify-between">
+            <span>¿Pueden adaptarse a restricciones alimentarias?</span>
+            <i class="fas fa-chevron-down text-gold"></i>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            Por supuesto. Diseñamos menús especiales para vegetarianos, veganos, celíacos, alérgicos y cualquier otra restricción alimentaria sin costo adicional.
+          </p>
+        </details>
+        <details class="bg-white rounded-xl p-6 shadow-md reveal">
+          <summary class="font-serif text-lg font-bold text-dark-brown cursor-pointer flex items-center justify-between">
+            <span>¿Trabajan con presupuesto limitado?</span>
+            <i class="fas fa-chevron-down text-gold"></i>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            Sí. Cada plan es personalizable y podemos adaptar la propuesta a tu presupuesto, manteniendo siempre la calidad que nos caracteriza. Conversemos sobre tus posibilidades.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 px-6 lg:px-12 bg-dark-brown text-white text-center">
+    <div class="container mx-auto max-w-3xl reveal-scale">
+      <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">
+        Solicita tu <span class="italic text-gold">cotización</span> personalizada
+      </h2>
+      <p class="text-gray-300 mb-10 text-lg">
+        Conversemos sobre tu evento y diseñemos juntos la propuesta perfecta
+      </p>
+      <a href="contacto.html" class="btn-primary">
+        <span><i class="fas fa-envelope mr-2"></i>Solicitar Cotización</span>
+      </a>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPricing();
+      renderExtras();
+      // Activar animaciones reveal sobre los nodos insertados dinámicamente
+      if (typeof window.observeRevealElements === 'function') {
+        window.observeRevealElements();
+      }
+    });
+
+    function renderPricing() {
+      const grid = document.getElementById('pricing-grid');
+      if (!grid) return;
+      grid.innerHTML = BANQUETERIA_DATA.pricing.map((p, i) => `
+        <div class="price-card p-8 lg:p-10 reveal delay-${(i + 1) * 100}">
+          <div class="text-center mb-6">
+            <h3 class="font-serif text-2xl font-bold text-dark-brown mb-2">${p.name}</h3>
+            <p class="text-gold text-sm tracking-widest uppercase">${p.tagline}</p>
+          </div>
+
+          <div class="text-center mb-8 pb-8 border-b border-gray-100">
+            <div class="flex items-baseline justify-center gap-1">
+              <span class="text-4xl lg:text-5xl font-serif font-bold text-dark-brown">${p.price}</span>
+            </div>
+            <p class="text-gray-500 text-sm mt-2">${p.priceUnit} · CLP</p>
+          </div>
+
+          <ul class="space-y-4 mb-8">
+            ${p.features.map(f => `
+              <li class="flex items-start gap-3 text-gray-700">
+                <i class="fas fa-check text-gold mt-1 flex-shrink-0"></i>
+                <span class="text-sm">${f}</span>
+              </li>
+            `).join('')}
+          </ul>
+
+          <a href="contacto.html" class="block text-center ${p.featured ? 'btn-primary' : 'btn-outline'}">
+            <span class="${p.featured ? '' : ''}">Solicitar Cotización</span>
+          </a>
+        </div>
+      `).join('');
+    }
+
+    function renderExtras() {
+      const grid = document.getElementById('extras-grid');
+      if (!grid) return;
+      grid.innerHTML = BANQUETERIA_DATA.extras.map((e, i) => `
+        <div class="card-hover bg-white p-8 rounded-xl reveal delay-${(i + 1) * 100}">
+          <div class="w-16 h-16 rounded-full bg-cream-dark flex items-center justify-center mb-5">
+            <i class="fas ${e.icon} text-2xl text-gold"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-dark-brown mb-3">${e.title}</h3>
+          <p class="text-gray-600 text-sm">${e.desc}</p>
+        </div>
+      `).join('');
+    }
+  </script>
+</body>
+</html>

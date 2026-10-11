@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros | Sabores de Autor - Banquetería Premium</title>
+  <meta name="description" content="Conoce nuestra historia, equipo y valores. Más de 15 años de excelencia en banquetería premium.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#C9A961', 'gold-light': '#E8D5A0', 'gold-dark': '#A88B47',
+            cream: '#FAF7F2', 'cream-dark': '#F0E9DC',
+            'dark-brown': '#2C1810', 'dark-soft': '#4A3520'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-cream">
+
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <header class="hero-bg pt-40 pb-24 text-white" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80');">
+    <div class="hero-content container mx-auto px-6 lg:px-12 text-center">
+      <p class="text-gold-light tracking-[0.4em] uppercase text-sm mb-4 reveal">Nuestra Historia</p>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 reveal delay-100">Sobre <span class="text-gold italic">Nosotros</span></h1>
+      <p class="text-xl text-gray-200 max-w-2xl mx-auto reveal delay-200">
+        Tradición, excelencia y pasión por la gastronomía desde 2009
+      </p>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="bg-cream-dark py-4 border-b border-gold-light/30">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="flex items-center gap-2 text-sm text-gray-600">
+        <a href="../index.html" class="hover:text-gold transition">Inicio</a>
+        <i class="fas fa-chevron-right text-xs text-gold"></i>
+        <span class="text-gold font-medium">Sobre Nosotros</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HISTORIA -->
+  <section class="py-24 px-6 lg:px-12">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal-left">
+          <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3">Nuestra Trayectoria</p>
+          <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown mb-6">
+            Una historia de <span class="italic text-gold">sabor</span> y excelencia
+          </h2>
+          <div class="space-y-4 text-gray-700 leading-relaxed">
+            <p>
+              <strong>Sabores de Autor</strong> nació en 2009 del sueño de María Soledad,
+              una chef apasionada que creía firmemente que cada evento merece una experiencia
+              gastronómica única e inolvidable.
+            </p>
+            <p>
+              Lo que comenzó como un pequeño negocio familiar, hoy es una de las banqueterías
+              más reconocidas del país. Hemos tenido el privilegio de acompañar a más de
+              <strong>1.200 parejas y empresas</strong> en sus momentos más importantes.
+            </p>
+            <p>
+              Nuestro compromiso con la excelencia, la frescura de nuestros ingredientes
+              y la atención al detalle nos ha convertido en sinónimo de calidad.
+              Cada plato cuenta una historia, cada montaje es una obra de arte,
+              y cada cliente se convierte en parte de nuestra familia.
+            </p>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-6">
+            <div>
+              <div class="text-4xl font-serif font-bold text-gold">15+</div>
+              <p class="text-xs uppercase tracking-widest text-gray-600">Años</p>
+            </div>
+            <div class="border-l border-gold-light pl-6">
+              <div class="text-4xl font-serif font-bold text-gold">1200+</div>
+              <p class="text-xs uppercase tracking-widest text-gray-600">Eventos</p>
+            </div>
+            <div class="border-l border-gold-light pl-6">
+              <div class="text-4xl font-serif font-bold text-gold">98%</div>
+              <p class="text-xs uppercase tracking-widest text-gray-600">Satisfacción</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-right relative">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Chef en cocina" class="rounded-lg shadow-2xl w-full">
+          <div class="absolute -bottom-8 -left-8 bg-gold text-dark p-8 rounded-lg shadow-xl hidden lg:block max-w-xs">
+            <p class="font-serif italic text-xl leading-tight">
+              "La cocina es el arte de transformar momentos en recuerdos"
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISIÓN VISIÓN VALORES -->
+  <section class="py-24 px-6 lg:px-12 bg-cream-dark">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div class="bg-white p-10 rounded-xl shadow-lg reveal">
+          <div class="icon-circle mb-6">
+            <i class="fas fa-bullseye text-3xl text-gold"></i>
+          </div>
+          <h3 class="font-serif text-3xl font-bold text-dark-brown mb-4">Nuestra Misión</h3>
+          <p class="text-gray-700 leading-relaxed">
+            Crear experiencias gastronómicas excepcionales que superen las expectativas de
+            nuestros clientes, utilizando ingredientes frescos y de calidad, con un servicio
+            personalizado y atención al detalle que haga de cada evento algo inolvidable.
+          </p>
+        </div>
+        <div class="bg-white p-10 rounded-xl shadow-lg reveal delay-100">
+          <div class="icon-circle mb-6">
+            <i class="fas fa-eye text-3xl text-gold"></i>
+          </div>
+          <h3 class="font-serif text-3xl font-bold text-dark-brown mb-4">Nuestra Visión</h3>
+          <p class="text-gray-700 leading-relaxed">
+            Ser reconocidos como la banquetería líder en Latinoamérica, destacando por
+            nuestra innovación, excelencia y compromiso con nuestros clientes, colaboradores
+            y el medio ambiente.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mb-12">
+        <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3 reveal">Lo que nos define</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown reveal delay-100">Nuestros Valores</h2>
+        <div class="section-title reveal delay-200"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="values-grid"></div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section class="py-24 px-6 lg:px-12">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3 reveal">Las personas detrás</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown reveal delay-100">Nuestro Equipo</h2>
+        <div class="section-title reveal delay-200"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-6 reveal delay-200">
+          Profesionales apasionados por la gastronomía y la excelencia
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="team-grid"></div>
+    </div>
+  </section>
+
+  <!-- ESTADÍSTICAS -->
+  <section class="py-20 px-6 lg:px-12 bg-dark-brown text-white">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center" id="stats-grid"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6 lg:px-12 text-center bg-cream">
+    <div class="container mx-auto max-w-3xl reveal">
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown mb-6">
+        ¿Listo para ser parte de <span class="italic text-gold">nuestra historia</span>?
+      </h2>
+      <p class="text-gray-600 mb-10 text-lg">
+        Creemos juntos el evento que siempre soñaste
+      </p>
+      <a href="contacto.html" class="btn-primary inline-block">
+        <span>Contáctanos</span>
+      </a>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderValues();
+      renderTeam();
+      renderStats();
+      // Activar animaciones reveal sobre los nodos insertados dinámicamente
+      if (typeof window.observeRevealElements === 'function') {
+        window.observeRevealElements();
+      }
+    });
+
+    function renderValues() {
+      const grid = document.getElementById('values-grid');
+      if (!grid) return;
+      grid.innerHTML = BANQUETERIA_DATA.values.map((v, i) => `
+        <div class="card-hover bg-white p-8 rounded-xl text-center reveal delay-${(i + 1) * 100}">
+          <div class="icon-circle mx-auto mb-5">
+            <i class="fas ${v.icon} text-2xl text-gold"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-dark-brown mb-3">${v.title}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">${v.description}</p>
+        </div>
+      `).join('');
+    }
+
+    function renderTeam() {
+      const grid = document.getElementById('team-grid');
+      if (!grid) return;
+      grid.innerHTML = BANQUETERIA_DATA.team.map((m, i) => `
+        <div class="card-hover bg-white rounded-xl overflow-hidden shadow-md reveal delay-${(i + 1) * 100}">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img src="${m.photo}" alt="${m.name}" class="w-full h-full object-cover transition duration-700 hover:scale-110" loading="lazy">
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-serif text-xl font-bold text-dark-brown mb-1">${m.name}</h3>
+            <p class="text-gold tracking-widest uppercase text-xs mb-3">${m.role}</p>
+            <p class="text-gray-600 text-sm leading-relaxed">${m.bio}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderStats() {
+      const grid = document.getElementById('stats-grid');
+      if (!grid) return;
+      grid.innerHTML = BANQUETERIA_DATA.stats.map((s, i) => `
+        <div class="reveal delay-${(i + 1) * 100}">
+          <div class="counter" data-target="${s.value}" data-suffix="${s.suffix}">0${s.suffix}</div>
+          <p class="text-gold-light tracking-widest uppercase text-xs mt-3">${s.label}</p>
+        </div>
+      `).join('');
+      setTimeout(() => {
+        const counters = document.querySelectorAll('.counter');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+        counters.forEach(c => observer.observe(c));
+      }, 200);
+    }
+  </script>
+</body>
+</html>

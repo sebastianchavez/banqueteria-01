@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestros Servicios | Sabores de Autor - Catering Premium</title>
+  <meta name="description" content="Servicios de banquetería para bodas, eventos corporativos, cocktails, mesas de dulces y producción integral.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#C9A961', 'gold-light': '#E8D5A0', 'gold-dark': '#A88B47',
+            cream: '#FAF7F2', 'cream-dark': '#F0E9DC',
+            'dark-brown': '#2C1810', 'dark-soft': '#4A3520'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-cream">
+
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <header class="hero-bg pt-40 pb-24 text-white" style="background-image: url('https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=1920&q=80');">
+    <div class="hero-content container mx-auto px-6 lg:px-12 text-center">
+      <p class="text-gold-light tracking-[0.4em] uppercase text-sm mb-4 reveal">Lo que ofrecemos</p>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 reveal delay-100">Nuestros <span class="text-gold italic">Servicios</span></h1>
+      <p class="text-xl text-gray-200 max-w-2xl mx-auto reveal delay-200">
+        Soluciones gastronómicas integrales para cada momento especial
+      </p>
+    </div>
+  </header>
+
+  <div class="bg-cream-dark py-4 border-b border-gold-light/30">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="flex items-center gap-2 text-sm text-gray-600">
+        <a href="../index.html" class="hover:text-gold transition">Inicio</a>
+        <i class="fas fa-chevron-right text-xs text-gold"></i>
+        <span class="text-gold font-medium">Servicios</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS PRINCIPALES -->
+  <section class="py-24 px-6 lg:px-12">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3 reveal">Servicios Integrales</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown reveal delay-100">Especialidades Culinarias</h2>
+        <div class="section-title reveal delay-200"></div>
+      </div>
+
+      <div class="space-y-12" id="services-detail"></div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="py-24 px-6 lg:px-12 bg-cream-dark">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3 reveal">Cómo trabajamos</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown reveal delay-100">Nuestro Proceso</h2>
+        <div class="section-title reveal delay-200"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center reveal">
+          <div class="w-20 h-20 rounded-full bg-dark-brown text-gold flex items-center justify-center mx-auto mb-5 font-serif text-3xl font-bold">01</div>
+          <h3 class="font-serif text-xl font-bold text-dark-brown mb-3">Consulta Inicial</h3>
+          <p class="text-gray-600 text-sm">Conversamos sobre tu visión, expectativas y presupuesto para tu evento</p>
+        </div>
+        <div class="text-center reveal delay-100">
+          <div class="w-20 h-20 rounded-full bg-dark-brown text-gold flex items-center justify-center mx-auto mb-5 font-serif text-3xl font-bold">02</div>
+          <h3 class="font-serif text-xl font-bold text-dark-brown mb-3">Propuesta Personalizada</h3>
+          <p class="text-gray-600 text-sm">Diseñamos un menú y propuesta únicos para tu celebración</p>
+        </div>
+        <div class="text-center reveal delay-200">
+          <div class="w-20 h-20 rounded-full bg-dark-brown text-gold flex items-center justify-center mx-auto mb-5 font-serif text-3xl font-bold">03</div>
+          <h3 class="font-serif text-xl font-bold text-dark-brown mb-3">Degustación</h3>
+          <p class="text-gray-600 text-sm">Probamos juntos los platos seleccionados y ajustamos detalles</p>
+        </div>
+        <div class="text-center reveal delay-300">
+          <div class="w-20 h-20 rounded-full bg-dark-brown text-gold flex items-center justify-center mx-auto mb-5 font-serif text-3xl font-bold">04</div>
+          <h3 class="font-serif text-xl font-bold text-dark-brown mb-3">Evento Perfecto</h3>
+          <p class="text-gray-600 text-sm">Ejecutamos todo para que solo disfrutes tu evento soñado</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXTRAS -->
+  <section class="py-24 px-6 lg:px-12">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3 reveal">Complementos</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown reveal delay-100">Servicios Adicionales</h2>
+        <div class="section-title reveal delay-200"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="extras-grid"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 px-6 lg:px-12 bg-dark-brown text-white text-center">
+    <div class="container mx-auto max-w-3xl reveal-scale">
+      <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">
+        ¿Cuál servicio se adapta <span class="italic text-gold">a tu evento</span>?
+      </h2>
+      <p class="text-gray-300 mb-10 text-lg">
+        Conversemos y diseñemos juntos la experiencia perfecta
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contacto.html" class="btn-primary">
+          <span><i class="fas fa-comments mr-2"></i>Solicitar Asesoría</span>
+        </a>
+        <a href="precios.html" class="btn-outline !text-gold !border-gold hover:!bg-gold hover:!text-dark">
+          Ver Planes y Precios
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderServicesDetail();
+      renderExtras();
+      // Activar animaciones reveal sobre los nodos insertados dinámicamente
+      if (typeof window.observeRevealElements === 'function') {
+        window.observeRevealElements();
+      }
+    });
+
+    function renderServicesDetail() {
+      const container = document.getElementById('services-detail');
+      if (!container) return;
+      container.innerHTML = BANQUETERIA_DATA.services.map((s, i) => {
+        const reverse = i % 2 === 1;
+        return `
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal ${reverse ? '' : ''}">
+            <div class="${reverse ? 'lg:order-2' : ''}">
+              <img src="${s.image}" alt="${s.title}" class="rounded-xl shadow-2xl w-full h-[400px] object-cover" loading="lazy">
+            </div>
+            <div class="${reverse ? 'lg:order-1' : ''}">
+              <div class="inline-flex items-center gap-3 mb-4">
+                <div class="w-14 h-14 rounded-full gold-gradient flex items-center justify-center">
+                  <i class="fas ${s.icon} text-dark text-xl"></i>
+                </div>
+                <span class="text-gold tracking-widest uppercase text-xs">Servicio ${String(i + 1).padStart(2, '0')}</span>
+              </div>
+              <h3 class="font-serif text-3xl md:text-4xl font-bold text-dark-brown mb-4">${s.title}</h3>
+              <p class="text-gray-700 leading-relaxed mb-6">${s.description}</p>
+              <ul class="space-y-3 mb-6">
+                <li class="flex items-center gap-3 text-gray-700"><i class="fas fa-check text-gold"></i> Menú personalizado</li>
+                <li class="flex items-center gap-3 text-gray-700"><i class="fas fa-check text-gold"></i> Servicio profesional</li>
+                <li class="flex items-center gap-3 text-gray-700"><i class="fas fa-check text-gold"></i> Coordinación integral</li>
+                <li class="flex items-center gap-3 text-gray-700"><i class="fas fa-check text-gold"></i> Montaje y ambientación</li>
+              </ul>
+              <a href="contacto.html" class="text-gold font-medium tracking-widest uppercase text-sm hover:text-gold-dark transition">
+                Cotizar este servicio <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        `;
+      }).join('<hr class="border-gold-light/30">');
+    }
+
+    function renderExtras() {
+      const grid = document.getElementById('extras-grid');
+      if (!grid) return;
+      grid.innerHTML = BANQUETERIA_DATA.extras.map((e, i) => `
+        <div class="card-hover bg-white p-8 rounded-xl reveal delay-${(i + 1) * 100}">
+          <div class="w-16 h-16 rounded-full bg-cream-dark flex items-center justify-center mb-5 transition group-hover:bg-gold">
+            <i class="fas ${e.icon} text-2xl text-gold"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-dark-brown mb-3">${e.title}</h3>
+          <p class="text-gray-600 text-sm">${e.desc}</p>
+        </div>
+      `).join('');
+    }
+  </script>
+</body>
+</html>

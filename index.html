@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabores de Autor | Banquetería Premium & Catering de Lujo</title>
+  <meta name="description" content="Banquetería premium especializada en bodas, eventos corporativos y cocktails. Más de 15 años creando experiencias gastronómicas inolvidables.">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#C9A961',
+            'gold-light': '#E8D5A0',
+            'gold-dark': '#A88B47',
+            cream: '#FAF7F2',
+            'cream-dark': '#F0E9DC',
+            'dark-brown': '#2C1810',
+            'dark-soft': '#4A3520'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+</head>
+<body class="bg-cream">
+
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- ========================================
+       HERO
+       ======================================== -->
+  <header class="hero-bg min-h-screen flex items-center justify-center text-white" style="background-image: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1920&q=80');">
+    <div class="hero-content text-center px-6 max-w-5xl">
+      <p class="text-gold-light tracking-[0.4em] uppercase text-sm mb-6 reveal">Banquetería Premium desde 2009</p>
+      <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 reveal delay-100">
+        Creamos Momentos<br><span class="text-gold italic">Inolvidables</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 reveal delay-200">
+        Catering de excelencia para bodas, eventos corporativos y celebraciones que merecen lo mejor.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center reveal delay-300">
+        <a href="pages/contacto.html" class="btn-primary">
+          <span><i class="fas fa-calendar-check mr-2"></i>Reserva tu Evento</span>
+        </a>
+        <a href="pages/servicios.html" class="btn-outline !text-white !border-white hover:!bg-white hover:!text-dark">
+          Conoce Nuestros Servicios
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white text-center reveal delay-500">
+      <p class="text-xs tracking-widest uppercase mb-2">Descubrir</p>
+      <div class="w-6 h-10 border-2 border-white/50 rounded-full mx-auto flex justify-center pt-2">
+        <div class="w-1 h-3 bg-gold rounded-full animate-bounce"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================
+       SERVICIOS DESTACADOS
+       ======================================== -->
+  <section class="py-24 px-6 lg:px-12">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3 reveal">Lo que ofrecemos</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown reveal delay-100">Nuestros Servicios</h2>
+        <div class="section-title reveal delay-200"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-6 reveal delay-200">
+          Soluciones gastronómicas integrales para cada tipo de celebración
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid"></div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       BANNER FRASE
+       ======================================== -->
+  <section class="bg-dark-brown py-20 px-6 lg:px-12 text-white text-center reveal-scale">
+    <div class="container mx-auto max-w-4xl">
+      <i class="fas fa-quote-left text-gold text-4xl mb-6"></i>
+      <h2 class="font-serif text-3xl md:text-5xl leading-tight italic mb-6">
+        "Cada evento es una historia única. Nuestra misión es convertir la tuya en una experiencia gastronómica que jamás se olvide."
+      </h2>
+      <p class="text-gold-light tracking-widest uppercase text-sm">Chef María Soledad · Fundadora</p>
+    </div>
+  </section>
+
+  <!-- ========================================
+       GALERÍA PREVIEW
+       ======================================== -->
+  <section class="py-24 px-6 lg:px-12 bg-cream-dark">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3 reveal">Portfolio</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown reveal delay-100">Galería de Eventos</h2>
+        <div class="section-title reveal delay-200"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-6 reveal delay-200">
+          Algunos de los momentos mágicos que hemos tenido el privilegio de crear
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-preview"></div>
+
+      <div class="text-center mt-12 reveal">
+        <a href="pages/galeria.html" class="btn-primary">
+          <span><i class="fas fa-images mr-2"></i>Ver Galería Completa</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       ESTADÍSTICAS
+       ======================================== -->
+  <section class="py-20 px-6 lg:px-12 bg-dark-brown text-white">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center" id="stats-grid"></div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       TESTIMONIOS
+       ======================================== -->
+  <section class="py-24 px-6 lg:px-12">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3 reveal">Testimonios</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-brown reveal delay-100">Lo Que Dicen Nuestros Clientes</h2>
+        <div class="section-title reveal delay-200"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="testimonials-grid"></div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       CTA FINAL
+       ======================================== -->
+  <section class="py-24 px-6 lg:px-12 hero-bg text-white text-center" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80');">
+    <div class="hero-content container mx-auto max-w-3xl reveal-scale">
+      <p class="text-gold-light tracking-[0.3em] uppercase text-sm mb-4">¿Listo para tu evento?</p>
+      <h2 class="font-serif text-4xl md:text-6xl mb-6">Hagamos algo<br><span class="text-gold italic">extraordinario</span></h2>
+      <p class="text-lg text-gray-200 mb-10">
+        Agenda una reunión sin compromiso y diseñemos juntos la experiencia perfecta
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="pages/contacto.html" class="btn-primary">
+          <span>Solicitar Cotización</span>
+        </a>
+        <a href="https://wa.me/56987654321" target="_blank" rel="noopener" class="btn-outline !text-white !border-white hover:!bg-white hover:!text-dark">
+          <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderServices();
+      renderGalleryPreview();
+      renderStats();
+      renderTestimonials();
+      // Activar animaciones reveal sobre los nodos insertados dinámicamente
+      if (typeof window.observeRevealElements === 'function') {
+        window.observeRevealElements();
+      }
+    });
+
+    function renderServices() {
+      const grid = document.getElementById('services-grid');
+      if (!grid) return;
+      const services = BANQUETERIA_DATA.services.slice(0, 6);
+      grid.innerHTML = services.map((s, i) => `
+        <div class="card-hover bg-white rounded-xl overflow-hidden shadow-md reveal delay-${(i % 3 + 1) * 100}">
+          <div class="h-48 overflow-hidden">
+            <img src="${s.image}" alt="${s.title}" class="w-full h-full object-cover transition duration-700 hover:scale-110" loading="lazy">
+          </div>
+          <div class="p-8 text-center">
+            <div class="icon-circle mx-auto mb-5">
+              <i class="fas ${s.icon} text-2xl text-gold"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-dark-brown mb-3">${s.title}</h3>
+            <p class="text-gray-600 leading-relaxed mb-5">${s.description}</p>
+            <a href="pages/servicios.html" class="text-gold font-medium text-sm tracking-widest uppercase hover:text-gold-dark transition">
+              Ver Más <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderGalleryPreview() {
+      const grid = document.getElementById('gallery-preview');
+      if (!grid) return;
+      const images = BANQUETERIA_DATA.gallery.slice(0, 8);
+      grid.innerHTML = images.map((img, i) => `
+        <div class="gallery-item aspect-square reveal delay-${(i % 4 + 1) * 100}" onclick="window.openLightbox('${img.src}')">
+          <img src="${img.src}" alt="${img.title}" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="text-center text-white">
+              <h4 class="font-serif text-lg font-bold">${img.title}</h4>
+              <p class="text-xs text-gold-light tracking-wider">${img.desc}</p>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderStats() {
+      const grid = document.getElementById('stats-grid');
+      if (!grid) return;
+      grid.innerHTML = BANQUETERIA_DATA.stats.map((s, i) => `
+        <div class="reveal delay-${(i + 1) * 100}">
+          <div class="counter" data-target="${s.value}" data-suffix="${s.suffix}">0${s.suffix}</div>
+          <p class="text-gold-light tracking-widest uppercase text-xs mt-3">${s.label}</p>
+        </div>
+      `).join('');
+      // Re-inicializar contadores y reveal para los nuevos elementos
+      setTimeout(() => {
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(c => observerCounter(c));
+        if (typeof window.observeRevealElements === 'function') {
+          window.observeRevealElements();
+        }
+      }, 200);
+    }
+
+    function renderTestimonials() {
+      const grid = document.getElementById('testimonials-grid');
+      if (!grid) return;
+      const testimonials = BANQUETERIA_DATA.testimonials.slice(0, 4);
+      grid.innerHTML = testimonials.map((t, i) => `
+        <div class="testimonial-card reveal delay-${(i % 2 + 1) * 100}">
+          <div class="flex items-center gap-1 mb-4">
+            ${'<i class="fas fa-star text-gold"></i>'.repeat(t.rating)}
+          </div>
+          <p class="text-gray-700 leading-relaxed italic mb-6">"${t.text}"</p>
+          <div class="flex items-center gap-4">
+            <img src="${t.photo}" alt="${t.name}" class="w-14 h-14 rounded-full object-cover">
+            <div>
+              <h4 class="font-serif font-bold text-dark-brown">${t.name}</h4>
+              <p class="text-xs text-gold tracking-wider uppercase">${t.event}</p>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Observer singleton para contadores (animarlos al entrar en viewport)
+    let counterObserver = null;
+    function observerCounter(el) {
+      if (!el) return;
+      if (!counterObserver) {
+        if (!('IntersectionObserver' in window)) {
+          animateCounter(el);
+          return;
+        }
+        counterObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              counterObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+      }
+      counterObserver.observe(el);
+    }
+  </script>
+</body>
+</html>

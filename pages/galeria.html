@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería | Sabores de Autor - Eventos Realizados</title>
+  <meta name="description" content="Descubre nuestra galería de eventos realizados: bodas, corporativos, cocktails y mesas de dulces.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#C9A961', 'gold-light': '#E8D5A0', 'gold-dark': '#A88B47',
+            cream: '#FAF7F2', 'cream-dark': '#F0E9DC',
+            'dark-brown': '#2C1810', 'dark-soft': '#4A3520'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    .gallery-filtered { transition: all 0.5s ease; }
+    .gallery-filtered.hidden-item { opacity: 0; transform: scale(0.8); position: absolute; pointer-events: none; }
+  </style>
+</head>
+<body class="bg-cream">
+
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <header class="hero-bg pt-40 pb-24 text-white" style="background-image: url('https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=1920&q=80');">
+    <div class="hero-content container mx-auto px-6 lg:px-12 text-center">
+      <p class="text-gold-light tracking-[0.4em] uppercase text-sm mb-4 reveal">Portfolio</p>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 reveal delay-100">Nuestra <span class="text-gold italic">Galería</span></h1>
+      <p class="text-xl text-gray-200 max-w-2xl mx-auto reveal delay-200">
+        Momentos mágicos capturados en cada uno de nuestros eventos
+      </p>
+    </div>
+  </header>
+
+  <div class="bg-cream-dark py-4 border-b border-gold-light/30">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="flex items-center gap-2 text-sm text-gray-600">
+        <a href="../index.html" class="hover:text-gold transition">Inicio</a>
+        <i class="fas fa-chevron-right text-xs text-gold"></i>
+        <span class="text-gold font-medium">Galería</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILTROS -->
+  <section class="py-16 px-6 lg:px-12">
+    <div class="container mx-auto">
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-12 reveal">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="bodas">Bodas</button>
+        <button class="filter-btn" data-filter="corporativos">Corporativos</button>
+        <button class="filter-btn" data-filter="cocktails">Cocktails</button>
+        <button class="filter-btn" data-filter="dulces">Mesas de Dulces</button>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-full"></div>
+
+      <div class="text-center mt-16 reveal">
+        <p class="text-gray-600 italic">
+          ¿Quieres ver más? Síguenos en
+          <a href="#" class="text-gold font-medium hover:text-gold-dark transition">Instagram</a> y
+          <a href="#" class="text-gold font-medium hover:text-gold-dark transition">Facebook</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6 lg:px-12 bg-dark-brown text-white text-center">
+    <div class="container mx-auto max-w-3xl reveal-scale">
+      <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">
+        Tu evento podría estar <span class="italic text-gold">aquí</span>
+      </h2>
+      <p class="text-gray-300 mb-10">
+        Creemos juntos las imágenes que recordarás por siempre
+      </p>
+      <a href="contacto.html" class="btn-primary">
+        <span><i class="fas fa-camera mr-2"></i>Reserva tu Sesión</span>
+      </a>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderGallery();
+      initGalleryFilters();
+      // Activar animaciones reveal sobre los nodos insertados dinámicamente
+      if (typeof window.observeRevealElements === 'function') {
+        window.observeRevealElements();
+      }
+    });
+
+    function renderGallery(filter = 'todos') {
+      const grid = document.getElementById('gallery-full');
+      if (!grid) return;
+      const images = BANQUETERIA_DATA.gallery;
+      grid.innerHTML = images.map((img, i) => `
+        <div class="gallery-item gallery-filtered aspect-square reveal${filter !== 'todos' && img.category !== filter ? ' hidden-item' : ''}" data-category="${img.category}" onclick="window.openLightbox('${img.src}')">
+          <img src="${img.src}" alt="${img.title}" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="text-center text-white">
+              <p class="text-gold text-xs tracking-widest uppercase mb-1">${getCategoryLabel(img.category)}</p>
+              <h4 class="font-serif text-lg font-bold">${img.title}</h4>
+              <p class="text-xs text-gray-300">${img.desc}</p>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function getCategoryLabel(cat) {
+      const labels = {
+        bodas: 'Boda',
+        corporativos: 'Corporativo',
+        cocktails: 'Cocktail',
+        dulces: 'Mesa de Dulces'
+      };
+      return labels[cat] || cat;
+    }
+
+    function initGalleryFilters() {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.dataset.filter;
+          const items = document.querySelectorAll('.gallery-filtered');
+
+          items.forEach((item, i) => {
+            const match = filter === 'todos' || item.dataset.category === filter;
+            if (match) {
+              item.classList.remove('hidden-item');
+              item.style.position = '';
+            } else {
+              item.classList.add('hidden-item');
+              item.style.position = 'absolute';
+            }
+          });
+        });
+      });
+    }
+  </script>
+</body>
+</html>
