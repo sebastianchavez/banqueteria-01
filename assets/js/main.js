@@ -3,11 +3,11 @@
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  renderCommonElements();
   initNavbar();
   initMobileMenu();
   initScrollReveal();
   initScrollTop();
-  renderCommonElements();
   initCounters();
 });
 
@@ -226,9 +226,6 @@ function renderNavbar() {
 
     <!-- Mobile menu -->
     <div class="mobile-menu fixed inset-0 bg-dark z-40 flex flex-col items-center justify-center lg:hidden">
-      <button class="mobile-menu-close absolute top-6 right-6 text-white text-3xl" aria-label="Cerrar menú">
-        <i class="fas fa-times"></i>
-      </button>
       <ul class="text-center space-y-6">
         <li><a href="${basePath}index.html" class="font-serif text-3xl text-white hover:text-gold transition">Inicio</a></li>
         <li><a href="${pagesPath}nosotros.html" class="font-serif text-3xl text-white hover:text-gold transition">Nosotros</a></li>
