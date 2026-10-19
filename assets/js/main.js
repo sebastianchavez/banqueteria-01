@@ -33,31 +33,43 @@ function initNavbar() {
 function initMobileMenu() {
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
-  const closeBtn = document.querySelector('.mobile-menu-close');
-  const mobileLinks = document.querySelectorAll('.mobile-menu a');
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
 
   if (!hamburger || !mobileMenu) return;
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-  });
+  const desktop = window.matchMedia('(min-width: 1280px)');
+  let previousOverflow = '';
 
-  if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+  function setOpen(open) {
+    if (open === mobileMenu.classList.contains('open')) return;
+    if (open) previousOverflow = document.body.style.overflow;
+    hamburger.classList.toggle('open', open);
+    mobileMenu.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+    hamburger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    mobileMenu.setAttribute('aria-hidden', String(!open));
+    mobileMenu.inert = !open;
+    document.body.style.overflow = open ? 'hidden' : previousOverflow;
+    if (open) mobileLinks[0]?.focus();
+    else if (!desktop.matches) hamburger.focus();
   }
 
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+  hamburger.addEventListener('click', () => {
+    setOpen(!mobileMenu.classList.contains('open'));
+  });
+  mobileLinks.forEach(link => link.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', event => {
+    if (!mobileMenu.classList.contains('open')) return;
+    if (event.key === 'Escape') setOpen(false);
+    if (event.key === 'Tab') {
+      const controls = [hamburger, ...mobileLinks];
+      const current = controls.indexOf(document.activeElement);
+      event.preventDefault();
+      controls[(current + (event.shiftKey ? -1 : 1) + controls.length) % controls.length].focus();
+    }
+  });
+  desktop.addEventListener('change', event => {
+    if (event.matches) setOpen(false);
   });
 }
 
@@ -203,7 +215,7 @@ function renderNavbar() {
           </div>
         </a>
 
-        <ul class="hidden lg:flex items-center gap-8 text-sm tracking-wider uppercase">
+        <ul class="hidden xl:flex items-center gap-6 text-sm tracking-wider uppercase">
           <li><a href="${basePath}index.html" class="nav-link" data-page="inicio">Inicio</a></li>
           <li><a href="${pagesPath}nosotros.html" class="nav-link" data-page="nosotros">Nosotros</a></li>
           <li><a href="${pagesPath}servicios.html" class="nav-link" data-page="servicios">Servicios</a></li>
@@ -212,11 +224,11 @@ function renderNavbar() {
           <li><a href="${pagesPath}contacto.html" class="nav-link" data-page="contacto">Contacto</a></li>
         </ul>
 
-        <a href="${pagesPath}contacto.html" class="hidden lg:inline-block btn-primary">
+        <a href="${pagesPath}contacto.html" class="hidden xl:inline-block btn-primary">
           <span><i class="fas fa-calendar-alt mr-2"></i>Reservar</span>
         </a>
 
-        <button class="hamburger lg:hidden z-50" aria-label="Menú">
+        <button class="hamburger xl:hidden z-50" type="button" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -225,7 +237,7 @@ function renderNavbar() {
     </nav>
 
     <!-- Mobile menu -->
-    <div class="mobile-menu fixed inset-0 bg-dark z-40 flex flex-col items-center justify-center lg:hidden">
+    <div id="mobile-menu" inert aria-hidden="true" class="mobile-menu fixed inset-0 bg-dark z-40 flex flex-col items-center justify-center xl:hidden">
       <ul class="text-center space-y-6">
         <li><a href="${basePath}index.html" class="font-serif text-3xl text-white hover:text-gold transition">Inicio</a></li>
         <li><a href="${pagesPath}nosotros.html" class="font-serif text-3xl text-white hover:text-gold transition">Nosotros</a></li>
@@ -336,7 +348,7 @@ function renderFooter() {
           <p class="text-gray-400 text-sm text-center md:text-left">
             © 2025 Sabores de Autor. Todos los derechos reservados.
           </p>
-          <div class="flex gap-6 text-sm">
+          <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-center">
             <a href="${pagesPath}privacidad.html" class="text-gray-400 hover:text-gold transition">Políticas de Privacidad</a>
             <a href="${pagesPath}terminos.html" class="text-gray-400 hover:text-gold transition">Términos y Condiciones</a>
           </div>
